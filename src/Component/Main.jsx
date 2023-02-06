@@ -24,7 +24,7 @@ const Main = () => {
 
   // condition query generator
   const queryGenerator = () => {
-    const blockSign = state.logical ? "&&" : "||";
+    const blockSign = !state.logical ? "&&" : "||";
     let str = "";
     state.conditions.forEach((x) => {
       const sign =x.operator
